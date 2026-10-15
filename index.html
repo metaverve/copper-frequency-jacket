@@ -1,1 +1,67 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copper Frequency Jacket</title><style>body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:#0a0a0a;color:#fff}header{text-align:center;padding:20px;border-bottom:3px solid #c9a227}nav{display:flex;gap:10px;padding:12px;background:#111}button{flex:1;padding:16px;font-size:16px;font-weight:bold;background:#222;color:#fff;border:none;border-radius:8px}button.active{background:#c9a227;color:#000}section{display:none;padding:16px}section.show{display:block}.card{background:#1a1a1a;padding:14px;margin:8px 0;border-left:4px solid #c9a227;border-radius:8px}</style></head><body><header><h1>Copper Frequency Jacket</h1></header><nav><button class="active" onclick="show('men')">Men’s Line</button><button onclick="show('women')">Women’s Line</button></nav><section id="men" class="show"><h2>Men’s Line</h2><div class="card"><b>Bomber</b> — Copper frequency MA-1</div><div class="card"><b>London Calling</b> — Punk circuitry</div><div class="card"><b>Mountain Monk</b> — Outdoor technical</div><div class="card"><b>Randy Racer</b> — White F1 red stripes</div><div class="card"><b>Líptė Rähł</b> — Black/red racing</div><div class="card"><b>T3P0</b> — Tactical fusion</div><div class="card"><b>Trombone</b> — Oliver moto frequency</div></section><section id="women"><h2>Women’s Line</h2><div class="card"><b>Luna</b> — Women’s Randy Racer</div><div class="card"><b>Vesper</b> — Women’s Bomber</div><div class="card"><b>Riot</b> — Women’s London Calling</div><div class="card"><b>Aria</b> — Women’s Mountain Monk</div><div class="card"><b>Nyx</b> — Women’s T3P0</div></section><script>function show(id){document.getElementById('men').className='';document.getElementById('women').className='';document.getElementById(id).className='show';document.querySelectorAll('button')[0].className=id=='men'?'active':'';document.querySelectorAll('button')[1].className=id=='women'?'active':'';}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copper Frequency</title>
+<style>
+:root{--bg:#0c0c0c;--card:#161616;--copper:#c9a227;--text:#eee;--muted:#aaa}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{padding:32px 20px;text-align:center;border-bottom:1px solid #222}
+h1{margin:0;font-weight:600;letter-spacing:0.5px;color:var(--copper)}
+.nav{display:flex;gap:12px;padding:16px;max-width:800px;margin:0 auto}
+.nav button{flex:1;padding:14px;font-size:16px;background:#1a1a1a;color:var(--copper);border:1px solid var(--copper);border-radius:8px;cursor:pointer}
+.nav button.active{background:var(--copper);color:#000}
+.section{display:none;padding:0 16px 40px;max-width:800px;margin:0 auto}
+.section.active{display:block}
+.card{background:var(--card);border-radius:12px;padding:20px;margin:16px 0;border:1px solid #222}
+.card h3{margin:0 0 8px;color:var(--copper)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.section-title{color:var(--copper);margin-top:24px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Copper Frequency</h1>
+  <p style="color:#888;margin:8px 0 0">Frequency-enabled jackets</p>
+</header>
+<div class="nav">
+  <button id="btn-mens" class="active" onclick="showLine('mens')">Men’s Line</button>
+  <button id="btn-womens" onclick="showLine('womens')">Women’s Line</button>
+</div>
+<div id="mens" class="section active">
+  <div class="card"><h3>Bomber</h3><p>Classic copper bomber with integrated transducers and copper wiring. External plug-in for frequency meter.</p></div>
+  <div class="card"><h3>London Calling</h3><p>Punk-inspired oversized copper jacket with exposed circuit details and high-contrast wiring.</p></div>
+  <div class="card"><h3>Mountain Monk</h3><p>Hooded technical outdoor jacket in earth-copper tones. Functional and meditative.</p></div>
+  <div class="card"><h3>Randy Racer</h3><p>White F1 racing jacket with bold red sleeve stripes. Copper circuit paths and black transducers.</p></div>
+  <div class="card"><h3>Líptė Rähł</h3><p>Black base racing jacket with red stripes. High-contrast motorsport copper frequency system.</p></div>
+  <div class="card"><h3>Trombone</h3><p>Black leather motorcycle silhouette (Oliver-inspired) with copper transducers and stand collar.</p></div>
+  <div class="card"><h3>T3P0</h3><p>Dark tactical sci-fi fusion. Armored silhouette with copper endoskeleton wiring.</p></div>
+</div>
+<div id="womens" class="section">
+  <div class="card"><h3>Luna</h3><p>Women’s Randy Racer. Tailored white F1 jacket with red sleeve stripes and copper frequency tech.</p></div>
+  <div class="card"><h3>Vesper</h3><p>Women’s Bomber. Cropped copper bomber with refined waist shaping.</p></div>
+  <div class="card"><h3>Riot</h3><p>Women’s London Calling. Tailored punk copper with elevated details.</p></div>
+  <div class="card"><h3>Aria</h3><p>Women’s Mountain Monk. Contoured hooded technical jacket.</p></div>
+  <div class="card"><h3>Nyx</h3><p>Women’s T3P0. Sculpted dark armored tactical with copper wiring.</p></div>
+</div>
+<div class="section" id="manufacturing">
+  <h2 class="section-title">Manufacturing</h2>
+  <div class="card"><h3>Process</h3><p>Copper fabric sourcing → cut-sew → transducer integration → wiring → plug-in ports → QC. Shared platform across all styles.</p></div>
+  <div class="card"><h3>Suppliers</h3><p>Copper-nickel conductive fabrics, transducer modules, and EMS assembly partners.</p></div>
+</div>
+<div class="section" id="kickstarter">
+  <h2 class="section-title">Kickstarter</h2>
+  <div class="card"><h3>Funding Path</h3><p>Launch with early-bird rewards for specific styles (including Luna and Randy Racer). Use pre-orders to fund production runs.</p></div>
+</div>
+<script>
+function showLine(line) {
+  document.getElementById('mens').classList.toggle('active', line === 'mens');
+  document.getElementById('womens').classList.toggle('active', line === 'womens');
+  document.getElementById('btn-mens').classList.toggle('active', line === 'mens');
+  document.getElementById('btn-womens').classList.toggle('active', line === 'womens');
+}
+</script>
+</body>
+</html>
